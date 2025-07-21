@@ -1,49 +1,42 @@
-    export const PORT = 8000
+    export const PORT = process.env.CONFIG_PORT || 8000;
 
-    export const IMAGE_PATH = "http://localhost:8000"
+    export const IMAGE_PATH = process.env.CONFIG_IMAGE_PATH
     export  const DEFAULT_IMAGE =`${IMAGE_PATH}/uploads/avatar.png`
     export  const ALL_DEFAULT_IMAGE =`${IMAGE_PATH}/uploads/noimage.png`
 
 
-    export const DATABASE = 'mongodb+srv://atikur:IlR19F6B1ULeiwL6@cluster0.skem4.mongodb.net/businness?retryWrites=true&w=majority&appName=Cluster0'
-    export const JWT_KEY = 'ABC12341241234'
-    export const JWT_EXPIRE_TIME = 30*24*60*60
+    export const DATABASE = process.env.CONFIG_MONGODB_URL
+    export const JWT_KEY = process.env.CONFIG_JWT_KEY
+    export const JWT_EXPIRE_TIME = process.env.CONFIG_JWT_EXPIRE_TIME
 
 
-    // export const EMAIL_HOST = "md.atikur.rahman@bracu.ac.bd"
-    // export const EMAIL_PORT = 25
-    // export const EMAIL_SECURITY = false
-    // export const EMAIL_USER = "md.atikur.rahman@bracu.ac.bd"
-    // export const EMAIL_PASS = "fshi uais cthm jtot"
-    // export const EMAIL_UN_AUTH = false
-
-    export const EMAIL_HOST = "smtp.gmail.com"
-    export const EMAIL_PORT = 587
-    export const EMAIL_SECURITY = false
-    export const EMAIL_USER = "atikurrahmanjabed@gmail.com"
-    export const EMAIL_PASS = "rdgnyjqfrichonlf"
-    export const EMAIL_UN_AUTH = false
+    export const EMAIL_HOST = process.env.CONFIG_EMAIL_HOST
+    export const EMAIL_PORT = process.env.CONFIG_EMAIL_PORT
+    export const EMAIL_SECURITY = process.env.CONFIG_EMAIL_SECURITY
+    export const EMAIL_USER = process.env.CONFIG_EMAIL_USER
+    export const EMAIL_PASS = process.env.CONFIG_EMAIL_PASS
+    export const EMAIL_UN_AUTH = process.env.CONFIG_EMAIL_UN_AUTH
 
 
-    export const CLOUDINARY_NAME = "dyjqndrul"
-    export const CLOUDINARY_API = '513797569378429'
-    export const CLOUDINARY_SECRET_KEY = "RTX_LPGNY4iv4GS6vpmmBqs1TuQ"
+    export const CLOUDINARY_NAME = process.env.CONFIG_CLOUDINARY_NAME
+    export const CLOUDINARY_API = process.env.CONFIG_CLOUDINARY_API
+    export const CLOUDINARY_SECRET_KEY = process.env.CONFIG_CLOUDINARY_SECRET_KEY
 
 
-    export const WEB_CACHE = false
-    export const MAX_JSON_SIZE = "50MB"
-    export const URL_ENCODE = true
+    export const WEB_CACHE = process.env.CONFIG_WEB_CACHE
+    export const MAX_JSON_SIZE = process.env.CONFIG_MAX_JSON_SIZE
+    export const URL_ENCODE = process.env.CONFIG_URL_ENCODE
 
 
-    export const REQUEST_TIME = 20*60*1000
-    export const REQUEST_NUMBER = 2000
+    export const REQUEST_TIME = process.env.CONFIG_REQUEST_TIME
+    export const REQUEST_NUMBER = process.env.CONFIG_REQUEST_NUMBER
 
-    export const PATHAO_BASE_URL = 'https://courier-api-sandbox.pathao.com';
-    export const PATHAO_CLIENT_ID = '7N1aMJQbWm';
-    export const PATHAO_CLIENT_SECRET = 'wRcaibZkUdSNz2EI9ZyuXLlNrnAv0TdPUPXMnD39';
-    export const PATHAO_USERNAME = 'test@pathao.com';
-    export const PATHAO_PASSWORD = 'lovePathao';
-    export const PATHAO_STORE_ID = '279697';
+    export const PATHAO_BASE_URL = process.env.CONFIG_PATHAO_BASE_URL
+    export const PATHAO_CLIENT_ID = process.env.CONFIG_PATHAO_CLIENT_ID
+    export const PATHAO_CLIENT_SECRET = process.env.CONFIG_PATHAO_CLIENT_SECRET
+    export const PATHAO_USERNAME = process.env.CONFIG_PATHAO_USERNAME
+    export const PATHAO_PASSWORD = process.env.CONFIG_PATHAO_PASSWORD
+    export const PATHAO_STORE_ID = process.env.CONFIG_PATHAO_STORE_ID
 
 
 
