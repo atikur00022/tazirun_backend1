@@ -6,7 +6,7 @@ import {JWT_EXPIRE_TIME, JWT_KEY} from "../config/config.js";
 export const TokenEncode = (user_id, email, isBanned, user_role) => {
 
     const KEY = JWT_KEY;
-    const EXPIRE = { expiresIn: JWT_EXPIRE_TIME };
+    const EXPIRE = { expiresIn: "30d" };
     const PAYLOAD = { user_id: user_id, email: email, isBanned: isBanned, role: user_role };
     return jwt.sign(PAYLOAD, KEY, EXPIRE);
 
