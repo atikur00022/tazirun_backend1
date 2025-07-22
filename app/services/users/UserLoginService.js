@@ -53,7 +53,7 @@ const UserLoginService = async (req, res) => {
             maxAge: 30 * 24 * 60 * 60 * 1000, // 30 days
             httpOnly: true,
             sameSite: "none",  // for cross-origin
-            secure: false       // for HTTPS
+            secure: true       // for HTTPS
         };
 
         res.cookie('Token', token, cookieOptions);
