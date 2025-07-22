@@ -54,7 +54,7 @@ router.get(
   "/GetAreaInsideZone/:zone_id/areas",
   AuthMiddleware,
   PathaoController.GetAreaInsideZone
-);
+); 
 router.post("/NewOrder", AuthMiddleware, PathaoController.NewOrder);
 
 // Users Route

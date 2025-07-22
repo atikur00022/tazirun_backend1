@@ -20,9 +20,8 @@ export const Registration = async (req, res) => {
 
 // Login
 export const Login = async (req, res) => {
-    const result = await UserLoginService(req, res);
-    res.json(result);
-}
+    await UserLoginService(req, res); // No res.json here!
+};
 
 // Logout
 export const Logout = async (req, res) => {

@@ -62,6 +62,9 @@ connection();
 // Base url
 app.use("/api/v1", router);
 
+app.get("/", (req, res) => {
+  res.send("Welcome to the API! Use /api/v1 for endpoints.");
+});
 
 // Not Found
 app.use("*", (req, res) => {
