@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import jwt from 'jsonwebtoken';
 import {JWT_EXPIRE_TIME, JWT_KEY} from "../config/config.js";
 
